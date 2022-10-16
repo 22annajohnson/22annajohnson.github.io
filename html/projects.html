@@ -8,8 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
-  <title>AProjects</title>
+  <title>Projects</title>
 </head>
+
 <body>
   <header class="primary-header">
     <div class="container">
@@ -22,9 +23,9 @@
         </button>
         <nav class="primary-navigation" id="primary-navigation">
           <ul aria-label="Primary" role="list" class="nav-list">
-            <li><a href="#">Projects</a></li>
+            <li><a href="./projects.html">Projects</a></li>
             <li><a href="../Documents/resume.pdf">Resume</a></li>
-            <li><a href="../Documents/cv.pdf">CV</a></li>
+            <!-- <li><a href="../Documents/cv.pdf">CV</a></li> -->
             <li><a href="https://github.com/22annajohnson">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/anna-johnson-01b430250/">LinkedIn</a></li>
           </ul>
@@ -34,10 +35,173 @@
     </div>
   </header>
 
+  <main>
+
+    <section class="padding-block-900">
+      <div class="banner-container">
+        <div class="top-banner">
+          <div class="container">
+            <h1 class="fs-secondary-heading top-banner-text">Here are some of my recent projects</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="even-columns">
+          <div class="flow">
+            <h1 class="fs-secondary-heading fw-bold column-headings">German Learning App</h1>
+            <p class="column-paragraph">
+              I am currently taking a beginner German course and needed some inspiration to study.  So I started making 
+              an iOS app to practive my vocab. My main focuses in this app are learning CoreData, reading data from JSON files
+              and dynamically adding UIViews and UIViewControllers.
+            </p>
+
+            <p class="column-paragraph">
+              This may not have been the most efficient way to study German, but it certainly taught me a lot about iOS development.
+              The vocabulary pages (Volkabeln) are controlled by a UICollectionViewController to allow for dynamically added vocabulary views and 
+              side scrolling behavior.  The individual vocabulary cells are contained inside a UITableView and are added dynamically from the JSON file.
+            </p>
+            <a href="https://github.com/22annajohnson/GermanApp">Check it out on GitHub!</a>
+          </div>
+          <div class="app-img-container">
+            <img class="app" src="../images/GermanAppChapters.png" alt="">
+            <img class="app" src="../images/german-app-vocablary.png">
+          </div>
+        </div>
+        <div class="container">
+          <div class="even-columns">
+            <div class="flow">
+              <h2 class="fs-tertiary-heading fw-semi-bold">A look into the code</h2>
+              <div class="code-even-columns">
+                <div class="flow">
+                  <div class="code-img-container">
+                    <div class="center-img-container">
+                      <img class="code-img-horizontal" src="../images/vocabulary-json.png" alt="">
+                      <figcaption>The german vocabulary was stored in a JSON file, dictating the chapter, vocabulary section, subsection, and category.
+                        Each vocab dictionary also included the article, german spelling, gender,  and english translation.
+                      </figcaption>
+                    </div>
+                    <div class="center-img-container">
+                      <img class="code-img-horizontal" src="../images/chapter-type-code.png" alt="">
+                      <figcaption>This custom Chapter type is called in a view model, allowing all the data in the JSON to be accessible programmatically. </figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" style="margin-top: 0px">
+                <div class="flow">
+                  <div class="code-img-container">
+                    <div class="center-img-container">
+                      <h2 class="fs-tertiary-heading" style="font-size: var(--fs-625); opacity: 0.6; margin-top: 0px;">Dynamic Chapter Cards</h2>
+                      <img src="../images/dynamic-chapter-cards.png" alt="">
+                      <figcaption>Each chapter card was dynamically added to the ViewController and was composed of the chapter name, number, and an arrow.
+                        This information was extracted from the ChapterViewModel.
+                      </figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" style="margin-top: 0px">
+                <div class="flow">
+                  <div class="code-img-container">
+                    <div class="center-img-container">
+                      <h2 class="fs-tertiary-heading" style="font-size: var(--fs-625); opacity: 0.6; margin-top: 0px;">Dynamic Vocab Cells</h2>
+                      <img src="../images/adding-vocab-cells.png" alt="">
+                      <figcaption>Each chapter page contained a UITableView.  The UITableViewCells contained custom Views to format the words, articles, 
+                        and translations. The information for each cell was extracted from the ChapterViewModel.
+                      </figcaption>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="padding-block-400">
+      <div class="container">
+        <div class="even-columns">
+          <div class="flow">
+            <h1 class="fs-secondary-heading fw-bold column-headings">Pilot Blackbox App</h1>
+            <p class="column-paragraph">
+              For my senior capstone project, my team has been tasked with creating a device to record and display real-time biometrics
+              for a pilot during flight.  This device is meant to be both a preventative and diagnostic device for aviation accidents.  
+              Data stored may be analyzed post accident to better understand the cause.
+              This project is ongoing, and expected to be completed before graduation in May 2023.  
+            </p>
+
+            <p class="column-paragraph">
+              The current goal is to design a device that attaches to the headset and send the data via Bluetooth to an app using CoreBluetoth.
+              This app will store and display the vitals, as well as flag any abnormalities in these values.  
+              The iOS app will then interface with a WatchOS app to alert the pilot of any flags.  
+            </p>
+
+            <p class="column-paragraph">
+              Cabin conditions will also be recorded and logged.  This will allow the program to notify the pilot if carbon monoxide levels are
+              too high or if cabin temperatures are too low.
+            </p>
+            <!-- <a href="https://github.com/22annajohnson/GermanApp">Check it out on GitHub!</a> -->
+          </div>
+          <div class="app-img-container">
+            <img class="app" src="../images/aviation-app-vitals.png" alt="">
+            <img class="app" src="../images/german-app-vocablary.png">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="padding-block-400">
+      <div class="container">
+          <div class="flow">
+            <h1 class="fs-secondary-heading fw-bold column-headings">Microcontroller Volume Control</h1>
+            <p class="column-paragraph">
+              A friend of mine built a computer in a record player and asked me to make a device to control the volume with
+              the original analog knobs.  I used a RaspberryPi Pico as the microcontoller and two rotary encoders.  The knobs may be 
+              rotated or clicked, both with different functionalities.  The code was written so that either action can equate to any series of
+              keypresses.
+            </p>
+          </div>
+      </div>
+      <div class="container">
+        <div class="even-columns">
+          <div class="flow">
+            <div class="code-even-columns">
+              <div class="flow">
+                <div class="code-img-container">
+                  <div class="center-img-container">
+                    <img class="code-img-horizontal" src="../images/record-player-computer.jpg" alt="">
+                    <figcaption>
+                      The final product! The two smaller brown knobs attach to the rotarty encoders, which can either be clicked or rotated.
+                    </figcaption>
+                  </div>
+                  <div class="center-img-container">
+                    <img class="code-img-horizontal" src="../images/pico.jpg" alt="">
+                    <figcaption>
+                      The pico in connected to two rotary encoders, which interfaces with the computer via usb.
+                    </figcaption>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <section class="padding-block-900">
+      <div class="container">
+        <div class="even-columns"></div>
+      </div>
+    </section>
+  </main>
 
   <footer class="clr-accent-400 txt-neutral-100">
     <div class="footer-logo">
-      <a href="../index.html"><h3 class="fw-bold fs-600">Anna Johnson</h3></a>
+      <a class="footer-logo" href="../index.html"><h3 class="fw-bold fs-600">Anna Johnson</h3></a>
     </div>
     <div class="container">
       <div class="even-columns">
@@ -46,7 +210,7 @@
             <li><a href="https://github.com/22annajohnson">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/anna-johnson-01b430250/">LinkedIn</a></li>
             <li><a href="../Documents/resume.pdf">Resume</a></li>
-            <li><a href="../Documents/cv.pdf">CV</a></li>
+            <!-- <li><a href="../Documents/cv.pdf">CV</a></li> -->
           </ul>
         </div>
         <div>
@@ -65,4 +229,7 @@
   </footer>
     
 </body>
+
+<script type="module" src="/main.js"></script>
+
 </html>
