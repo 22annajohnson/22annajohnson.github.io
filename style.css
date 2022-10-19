@@ -366,6 +366,12 @@
     height: 400px;
     object-fit: cover;
   }
+  .gif {
+    object-fit: cover;
+    align-self: center;
+    width: 30vw;
+    height: 35vw;
+  }
 
   .app {
     display: inline;
@@ -493,7 +499,7 @@
   }
   
   .padding-block-400 {
-    padding-block: var(--size-400);
+    padding-block: var(--size-300);
   }
   .padding-block-700 {
     padding-block: var(--size-700);
