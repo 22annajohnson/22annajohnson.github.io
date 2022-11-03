@@ -574,7 +574,7 @@
       padding-right: 0;
     }
     .app {
-      height: 95%;
+      height: 95vh;
     }
     .app-img-container {
       display: grid;
