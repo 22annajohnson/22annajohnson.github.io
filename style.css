@@ -234,7 +234,6 @@
   @media(max-width: 50em) {
     .primary-navigation {
       display: none;
-  
       position: fixed;
       padding:var(--size-700);
       inset: 7rem var(--size-400) auto;
@@ -243,14 +242,12 @@
       background-color: var(--clr-background-400);
       border-radius: var(--size-100);
       z-index: 100;
-      /* box-shadow: 0 0 0.5em rgb(0, 0, 0, .05); */
     }
   
     .primary-header[data-overlay]::before {
       content: "";
       position: fixed;
       inset: 0;
-      /* background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8)); */
     }
   
     .primary-navigation[data-visible] {
@@ -324,7 +321,6 @@
 
   .top-banner-text {
     position: relative;
-    top: 0;
     left: -100vw;
     top: -30px;
     width: 100vw;
@@ -484,6 +480,14 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+
+  .profile-container {
+    padding-left: 10vw;
+  }
+
+  .profile-text {
+    margin-top: 10vh;
+  }
   
   .fs-300 {
     font-size: var(--fs-300);
@@ -511,6 +515,10 @@
   .display-sm-none {
     display: none;
   }
+
+  .short-text {
+    display: none;
+  }
   
   @media (min-width: 50em) {
     .display-md-inline-flex {
@@ -520,15 +528,73 @@
 
   @media (max-width: 50em) {
     .top-banner {
-      margin-left: 0;
+      /* margin-left: 20%; */
       border-left: 0;
+      border: 40px solid var(--clr-accent-400);
+      border-left-color: var(--clr-background-500);
+
       padding: 100;
     }
     .top-banner-text {
+      top: -34px;
       padding-left: 10%;
       font-size: var(--size-500);
     }
+    .short-text { display: inline-block; }
+    .full-text { display: none; }
+
+    .profile-container {
+      padding-left: 0;
+    }
+    .profile-text {
+      margin-top: 5vh;
+    }
+
     .code-img-container {
       flex-direction: column;
     }
+
+    .column-paragraph {
+      width: 100%;
+    }
+    .column-headings {
+      margin-top: 10px;
+    }
+
+    .footer-columns {
+      grid-auto-flow: column;
+      grid-auto-columns: 2fr;
+    }
+
+    .padding-block-900 {
+      padding-block: var(--size-400);
+    }
+
+    .padding-block-400 {
+      padding-right: 0;
+    }
+    .app {
+      height: 95%;
+    }
+    .app-img-container {
+      display: grid;
+      grid-auto-columns: 1fr;
+    }
+
+    .code-even-columns {
+      width: 100%;
+    }
+    .center-img-container, .flow, .even-columns, .code-img-container{
+      margin-right: 0;
+    }
+
+    .gif {
+      width: 100%;
+      height: 116vw;
+    }
+
+    .mobile-hidden {
+      display: none;
+    }
+
   }
